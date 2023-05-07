@@ -3314,7 +3314,25 @@ class PlayState extends MusicBeatState
 		var rightR = controls.RIGHT_R;
 		var downR = controls.DOWN_R;
 		var leftR = controls.LEFT_R;
-
+		
+		if (botPlay)
+		{
+			up = false; //UP;
+			right = false; //RIGHT;
+			down = false; //DOWN;
+			left = false; //LEFT;
+	
+			upP = false; //UP_P;
+			rightP = false; //RIGHT_P;
+			downP = false; //DOWN_P;
+			leftP = false; //LEFT_P;
+	
+			upR = false; //UP_R;
+			rightR = false; //RIGHT_R;
+			downR = false; //DOWN_R;
+			leftR = false; //LEFT_R;
+		}
+		
 		var controlArray:Array<Bool> = [leftP, downP, upP, rightP];
 		var releaseArray:Array<Bool> = [leftR, downR, upR, rightR];
 
@@ -3332,10 +3350,6 @@ class PlayState extends MusicBeatState
 						notes.remove(noteLimbo, true);
 						noteLimbo.destroy();
 					}
-					noteLimbo = null;
-				}
-				else
-				{
 					noteLimbo = null;
 				}
 			}
